@@ -46,7 +46,9 @@ namespace Game
       private List<BonusView> _bonuses = new List<BonusView>();
       private List<PlayerActor> _players = new List<PlayerActor>();
       private List<BonusEffectBase> _effects = new List<BonusEffectBase>();
+      private int _curPLayerIndex = 0;
       public BallActor Ball => _ball;
+
 
       public bool TryGetPlayer(ulong id, out PlayerActor playerActor)
       {
@@ -165,6 +167,18 @@ namespace Game
       public void DestroyBall()
       {
          _ball.GetComponent<NetworkObject>().Despawn();
+      }
+
+      
+      public void SetPLayerPosition(Transform instanceTransform)
+      {
+         if (_curPLayerIndex >= 2)
+         {
+            Debug.LogError("players must be 2");
+         }
+         var data = playersInitData[_curPLayerIndex];
+         instanceTransform.position = data.PlayerSpawn.position;
+         _curPLayerIndex++;
       }
    }
 }

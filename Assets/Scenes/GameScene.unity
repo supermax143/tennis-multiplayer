@@ -826,6 +826,7 @@ GameObject:
   - component: {fileID: 889427236}
   - component: {fileID: 889427238}
   - component: {fileID: 889427239}
+  - component: {fileID: 889427240}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -895,6 +896,7 @@ MonoBehaviour:
   _gameController: {fileID: 193946839}
   _gameField: {fileID: 909802855}
   _gameView: {fileID: 111904586}
+  _instanceHandlers: []
 --- !u!114 &889427239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -911,6 +913,19 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
+--- !u!114 &889427240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889427235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fff5b3514b408c8bbfbf6ad8bba8af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 147818468367043156, guid: 127ef0b7c9fb81d4eb0f669157f5f0bc, type: 3}
 --- !u!1 &909802852
 GameObject:
   m_ObjectHideFlags: 0
